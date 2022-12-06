@@ -1,5 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to Line Comparison Computation Program on Master Branch");
+       int FirstPointX = 10;
+       int FirstPointY = 20;
+       int SecondPointX = 13;
+       int SecondPointY = 28;
+       int a = (int) Math.pow((SecondPointX-FirstPointX), 2 );
+       int b = (int) Math.pow((SecondPointY-FirstPointY), 2 );
+       double LengthOfALine =  Math.sqrt(a+b);
+       System.out.println("Length of the line is:"+LengthOfALine);
     }
-}
+ }
+
