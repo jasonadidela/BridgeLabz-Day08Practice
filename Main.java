@@ -43,6 +43,5 @@ public class Main {
         } else {
             System.out.println("The Given points for Line1 is not equals to Line2");
         }
-
     }
 }
