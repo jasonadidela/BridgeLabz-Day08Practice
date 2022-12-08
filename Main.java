@@ -11,15 +11,11 @@ public class Main {
         this.d = d;
     }
 
-    public int Line() {
-        return (int)LengthOfALine(this.a, this.b, this.c, this.d);
-    }
-
     public static double LengthOfALine(int a, int b, int c, int d) {
-        int x = (int)Math.pow((b - a), 2.0);
+        int x = (int)Math.pow((c - a), 2.0);
         int y = (int)Math.pow((d - b), 2.0);
-        double LengthOfALine = Math.sqrt((x + y));
-        lengthOfTheLine(a, b, c, d, LengthOfALine);
+        double LengthOfALine= Math.sqrt((x + y));
+        lengthOfTheLine(a,b,c,d,LengthOfALine);
         return LengthOfALine;
     }
 
@@ -35,14 +31,14 @@ public class Main {
         int b2 = 8;
         int c2 = 9;
         int d2 = 12;
-        String Line1 = String.valueOf((double) (new Main(a1, b1, c1, d1)).Line());
-        String Line2 = String.valueOf((double) (new Main(a2, b2, c2, d2)).Line());
-        if (Line1.equals(Line2)) {
-            System.out.println("The Given points for Line1 is equals to Line2");
-        } else {
+        String Line1 = String.valueOf(Main.LengthOfALine(a1, b1, c1, d1));
+        String Line2 = String.valueOf(Main.LengthOfALine(a2, b2, c2, d2));
+        if (!Line1.equals(Line2)) {
             System.out.println("The Given points for Line1 is not equals to Line2");
+        } else {
+            System.out.println("The Given points for Line1 is equals to Line2");
         }
-        if ((double) (new Main(a1, b1, c1, d1)).Line()>(double) (new Main(a2, b2, c2, d2)).Line()) {
+        if ( ( Main.LengthOfALine(a1, b1, c1, d1)) > (Main.LengthOfALine(a2, b2, c2, d2))) {
             System.out.println("Line1 is greater than Line2");
             System.out.println(Line1.compareTo(Line2));
         } else {
