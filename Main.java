@@ -43,5 +43,10 @@ public class Main {
         } else {
             System.out.println("The Given points for Line1 is not equals to Line2");
         }
+        if (Line1 > Line2) {
+            System.out.println("Line1 is greater than Line2");
+        } else {
+            System.out.println("Line1 is less than Line2");
+        }
     }
 }
